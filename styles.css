@@ -1,0 +1,328 @@
+/*GENERALES*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+header {
+    background-color: white;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    padding-bottom: 10px;
+    padding-right: 10px;
+
+    grid-area: cabeza;
+}
+main {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+}
+body {
+    height: 100vh;
+    background-color: #696767;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*GRIDS*/
+
+.gridBody {
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "rubiioini rubiioini rubiioini"
+    "textoPrincipal textoPrincipal textoPrincipal"
+    "columna festival festival"
+    "section3 section3 section3"
+    "pie pie pie";
+    /* grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 1fr 3fr 1fr 2fr 1fr 1fr; */
+
+}
+/* .gridGaleria {
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: space-evenly;
+    align-content: space-around;
+
+
+} */
+
+/*MENU*/
+
+.ulPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 25px;
+}
+ul {
+    list-style: none;
+    margin: 10px;
+    width: 100%;
+} 
+li {
+    display: inline-block;
+    width: 250px;
+    position:relative;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ul ul {
+    position: absolute;
+    display: none;
+}
+ul ul li {
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+ul li:hover ul{
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.linkMenu {
+    background-color: #000000;
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #FFD700;
+    border: outset;
+}
+.linkMenu:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.submenu {
+    background-color: #000000;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFD700;
+    border: none;
+    margin-left: 75px;
+}
+
+/*TERMINA EL MENU*/
+
+
+.blanco {
+    color: rgb(246, 246, 248);
+}
+h1 {
+    color: #FFD700;
+    text-align: center;
+    font-size: 50px;
+    height: 100px;
+    margin-top: 130px;
+}
+.titulosEspecial {
+    color: #FFD700;
+    text-align: center;
+    font-size: 50px;
+    height: 100px;
+}
+.negrita {
+    font-weight: bold;
+}
+
+
+/*PRIMERA PARTE */
+
+.sectionFlex1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 130px;
+}
+.fondoPrincipal {
+    width: 100%;
+    height: 700px;
+    background-image: url(imagenes/rubiio-caja.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    border-bottom: solid black 35px;
+    border-top: solid black 35px;
+
+    grid-area: rubiioini;
+}
+.bienvenido {
+    text-align: center;
+    color: #FFD700;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+#titulo {
+    height: 100px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+#textoPrincipal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+    word-spacing: 1.5rem;
+
+    grid-area: textoPrincipal;
+}
+#textoPrincipal p {
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/* -----------------------------*/
+.sectionFlex2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+/* COLUMNA */
+
+.columnaFlex {
+    background-color: rgb(245, 101, 185);
+    padding: 10px;
+    width: 25%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    grid-area: columna;
+}
+.columnaFlex h2 {
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+    height: 100px;
+}
+.columnaFlex p {
+    font-size: 20px;
+    margin: 10px;
+}
+.buttonFestival {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
+    width: 130px;
+    height: 60px;
+    border-radius: 20px;
+    border-style: outset;
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+.festival1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    padding: 10px;
+    border: solid rgb(255, 255, 255) 5px;
+
+    grid-area: festival;
+}
+/*TERMINA COLUMNA*/
+
+/*ARTICULOS*/
+
+.sectionFlex3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    grid-area: section3;
+}
+.articuloPrincipal1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 5px;
+}
+.articuloPrincipal2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 5px;
+}
+#buenosAires {
+    color: #FFD700;
+    font-size: 30px;
+    letter-spacing: 0.1rem;
+    text-align: right;
+}
+.textoBuenosAires {
+    font-size: 20px;
+    text-align: right;
+    color:rgb(255, 255, 255)
+}
+#ibiza {
+    color: #FFD700;
+    font-size: 30px;
+    letter-spacing: 0.1rem;
+    text-align: right;
+}
+.textoIbiza {
+    font-size: 20px;
+    text-align: right;
+    color:rgb(255, 255, 255)
+}
+
+
+
+/* ESTILOS DE GALERIA*/
+
+.galeria1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    margin: 20px;
+
+}
+.galeria1 img {
+    margin: 5px;
+    border-radius: 50px;
+}
+
+
+/*TERMINA GALERIA*/
+
+
+footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    
+    grid-area: pie;
+}
